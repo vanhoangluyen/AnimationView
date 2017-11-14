@@ -1,24 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FWS-NR-0WN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="OHL-gu-EGn">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="FWS-NR-0WN" customClass="ViewController" customModule="AnimationView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cUo-aH-gjp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsu-W8-TXe">
+                                <rect key="frame" x="62" y="249.5" width="250" height="167"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clN-0B-afZ">
+                                <rect key="frame" x="153" y="568.5" width="69" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1462208864" blue="0.054400987489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Animation"/>
+                                <connections>
+                                    <action selector="animatedBtnDidTouch:" destination="FWS-NR-0WN" eventType="touchUpInside" id="WNv-1K-qB7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="clN-0B-afZ" firstAttribute="centerX" secondItem="cUo-aH-gjp" secondAttribute="centerX" id="7FQ-dI-jft"/>
+                            <constraint firstItem="clN-0B-afZ" firstAttribute="centerY" secondItem="cUo-aH-gjp" secondAttribute="centerY" multiplier="7/4" id="CS8-SJ-2GC"/>
+                            <constraint firstItem="tsu-W8-TXe" firstAttribute="height" secondItem="cUo-aH-gjp" secondAttribute="height" multiplier="1/4" id="WZD-OS-lkN"/>
+                            <constraint firstItem="tsu-W8-TXe" firstAttribute="centerY" secondItem="cUo-aH-gjp" secondAttribute="centerY" id="kbg-Du-JAt"/>
+                            <constraint firstItem="tsu-W8-TXe" firstAttribute="width" secondItem="cUo-aH-gjp" secondAttribute="width" multiplier="2/3" id="oZu-HK-jKV"/>
+                            <constraint firstItem="tsu-W8-TXe" firstAttribute="centerX" secondItem="cUo-aH-gjp" secondAttribute="centerX" id="qpM-wr-W4z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wSw-gN-lh2"/>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="tsu-W8-TXe" id="n8R-fB-ndD"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6R-8T-Lmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="463" y="81"/>
         </scene>
     </scenes>
 </document>
